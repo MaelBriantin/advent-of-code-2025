@@ -9,7 +9,7 @@ For now, I choose to solve the challenges using Go, as it's a language I'm curre
 
 List of completed days:
 - [x] Day 1
-- [ ] Day 2
+- [x] Day 2
 - [ ] Day 3
 - [ ] Day 4
 - [ ] Day 5

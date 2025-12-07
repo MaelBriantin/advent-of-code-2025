@@ -22,4 +22,5 @@ func main() {
 
 	fmt.Println("\n--- Day 02 ---")
 	day02.Part1();
+	day02.Part2();
 }
