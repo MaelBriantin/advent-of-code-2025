@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"advent-of-code/day01"
+	"advent-of-code/day02"
 )
 
 func main() {
@@ -18,4 +19,7 @@ func main() {
 	if err := day01.Part2(); err != nil {
 		fmt.Fprintf(os.Stderr, "Day 01 Part 2 error: %v\n", err)
 	}
+
+	fmt.Println("\n--- Day 02 ---")
+	day02.Part1();
 }

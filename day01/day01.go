@@ -7,6 +7,8 @@ import (
 	"strconv"
 )
 
+const INPUT_FILE_PATH string = "./day01/input.txt"
+
 const MAX_DIAL_MARK int = 99
 const MIN_DIAL_MARK int = 0
 const STARTING_MARK int = 50
@@ -15,10 +17,10 @@ func Part1() error {
 	hit0 := 0
 	actualPosition := STARTING_MARK
 
-	if err := readLinesFromFile("./day01/input.txt", &hit0, &actualPosition, 1); err != nil {
+	if err := readFromInputFile(&hit0, &actualPosition, 1); err != nil {
 		return err
 	}
-	fmt.Printf("Part 1 - Final answer: %d\n", hit0)
+	fmt.Printf("Part 1 - Final answer: %d ⭐\n", hit0)
 	return nil
 }
 
@@ -26,10 +28,10 @@ func Part2() error {
 	hit0 := 0
 	actualPosition := STARTING_MARK
 
-	if err := readLinesFromFile("./day01/input.txt", &hit0, &actualPosition, 2); err != nil {
+	if err := readFromInputFile(&hit0, &actualPosition, 2); err != nil {
 		return err
 	}
-	fmt.Printf("Part 2 - Final answer: %d\n", hit0)
+	fmt.Printf("Part 2 - Final answer: %d ⭐\n", hit0)
 	return nil
 }
 
@@ -78,8 +80,8 @@ func clickInternal(code string, hit0 *int, actualPosition *int, eachHit bool) {
 	}
 }
 
-func readLinesFromFile(path string, hit0 *int, actualPosition *int, part int) error {
-	fileHandle, err := os.Open(path)
+func readFromInputFile(hit0 *int, actualPosition *int, part int) error {
+	fileHandle, err := os.Open(INPUT_FILE_PATH)
 	if err != nil {
 		return fmt.Errorf("failed to open file: %w", err)
 	}
