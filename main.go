@@ -6,6 +6,7 @@ import (
 
 	"advent-of-code/day01"
 	"advent-of-code/day02"
+	"advent-of-code/day03"
 )
 
 func main() {
@@ -21,6 +22,10 @@ func main() {
 	}
 
 	fmt.Println("\n--- Day 02 ---")
-	day02.Part1();
-	day02.Part2();
+	day02.Part1()
+	day02.Part2()
+
+	fmt.Println("\n--- Day 03 ---")
+	day03.Part1()
+	day03.Part2()
 }
